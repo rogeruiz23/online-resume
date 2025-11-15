@@ -29,36 +29,36 @@
 </head>
 <body class="antialiased p-4 sm:p-8 lg:p-4">
 
-  <!-- ===== Static fallback content so the page always renders ===== -->
+  <!-- ===== Contenedor Principal ===== -->
   <div id="resume-container" class="bg-white rounded-xl shadow-2xl mx-auto w-full lg:max-w-7xl lg:h-[calc(100vh-2rem)] resume-container">
 
-    <!-- LEFT -->
+    <!-- COLUMNA IZQUIERDA -->
     <aside id="left-column" class="lg:h-full lg:overflow-y-scroll bg-gray-50 p-6 rounded-lg shadow-inner mb-8 lg:mb-0">
       <div class="text-center mb-8">
-        <h3 id="online-resume-title" class="text-xl font-semibold text-blue-600 mb-4">ONLINE RESUME</h3>
+        <h3 id="online-resume-title" data-key="online_resume" class="text-xl font-semibold text-blue-600 mb-4">ONLINE RESUME</h3>
         <img id="profile-picture" src="https://i.imgur.com/MC5Vdc8.jpeg" alt="Roger Luis Ruiz Mahr" class="w-40 h-40 rounded-full mx-auto object-cover border-4 border-white shadow-lg mt-4 mb-4" onerror="this.onerror=null;this.src='https://placehold.co/160x160/9CA3AF/FFFFFF?text=R+R'" />
-        <h1 id="name-header" class="text-3xl font-extrabold text-gray-900 leading-tight whitespace-nowrap">rosher LUIS RUIZ MAHR</h1>
-        <h2 id="job-title-header" class="text-xl font-semibold text-blue-600 mt-1">QA Automation Engineer</h2>
+        <h1 id="name-header" data-key="name" class="text-3xl font-extrabold text-gray-900 leading-tight whitespace-nowrap">ROGER LUIS RUIZ MAHR</h1>
+        <h2 id="job-title-header" data-key="job_title" class="text-xl font-semibold text-blue-600 mt-1">QA Automation Engineer</h2>
       </div>
 
       <div class="flex justify-center space-x-4 mb-6 text-sm font-medium no-print">
-        <span id="choose-lang-text" class="text-gray-500">choose your language:</span>
+        <span id="choose-lang-text" data-key="choose_lang" class="text-gray-500">choose your language:</span>
         <a href="#" data-lang="en" class="language-link text-blue-600">English</a>
         <a href="#" data-lang="es" class="language-link">Spanish</a>
         <a href="#" data-lang="cz" class="language-link">Czech</a>
       </div>
       
       <div class="flex justify-center space-x-4 mb-8 no-print">
-        <button id="download-pdf-btn" class="px-4 py-2 bg-blue-600 text-white border border-blue-600 text-sm font-semibold rounded-lg hover:bg-blue-700 transition shadow-md">Download PDF</button>
+        <button id="download-pdf-btn" data-key="download_pdf" class="px-4 py-2 bg-blue-600 text-white border border-blue-600 text-sm font-semibold rounded-lg hover:bg-blue-700 transition shadow-md">Download PDF</button>
       </div>
 
-      <!-- Contact (static fallback) -->
+      <!-- Contacto -->
       <div id="contact-info-container" class="mb-8 p-4 border-t border-b border-gray-200">
-        <h3 id="contact-title" class="text-lg font-bold text-gray-800 mb-3">CONTACT</h3>
+        <h3 id="contact-title" data-key="contact_title" class="text-lg font-bold text-gray-800 mb-3">CONTACT</h3>
         <ul class="space-y-2 text-gray-700">
           <li class="flex items-center">
             <svg class="w-5 h-5 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            <a id="contact-location-link" href="https://www.google.com/maps/search/?api=1&query=Santa%20Cruz%20de%20la%20Sierra%2C%20Bolivia" target="_blank" class="hover:text-blue-600">Santa Cruz de la Sierra, Bolivia</a>
+            <a id="contact-location-link" data-key="location" href="https://www.google.com/maps/search/?api=1&query=Santa%20Cruz%20de%20la%20Sierra%2C%20Bolivia" target="_blank" class="hover:text-blue-600">Santa Cruz de la Sierra, Bolivia</a>
           </li>
           <li class="flex items-center">
             <svg class="w-5 h-5 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
@@ -75,196 +75,504 @@
         </ul>
       </div>
 
-      <!-- Summary -->
+      <!-- Resumen -->
       <div class="mb-8">
-        <h3 id="summary-title" class="text-lg font-bold text-gray-800 mb-3 border-b-2 border-gray-200 pb-1">SUMMARY</h3>
-        <p id="summary-p1" class="text-sm text-gray-700 mb-3">Dedicated Quality Assurance Automation Engineer with 3+ years of automation experience and 5+ years of manual testing.</p>
-        <p id="summary-p2" class="text-sm text-gray-700">Proven track record across construction, technology, and oil & gas. Strong in robust automated strategies, product quality, and efficient testing methodologies.</p>
+        <h3 id="summary-title" data-key="summary_title" class="text-lg font-bold text-gray-800 mb-3 border-b-2 border-gray-200 pb-1">SUMMARY</h3>
+        <p id="summary-p1" data-key="summary_p1" class="text-sm text-gray-700 mb-3">Dedicated Quality Assurance Automation Engineer with 3+ years of automation experience and 5+ years of manual testing.</p>
+        <p id="summary-p2" data-key="summary_p2" class="text-sm text-gray-700">Proven track record across construction, technology, and oil & gas. Strong in robust automated strategies, product quality, and efficient testing methodologies.</p>
       </div>
 
-      <!-- Skills -->
+      <!-- Habilidades (generadas dinámicamente) -->
       <div id="skills-section"></div>
     </aside>
 
-    <!-- RIGHT -->
+    <!-- COLUMNA DERECHA -->
     <main id="right-column" class="lg:h-full lg:overflow-y-scroll lg:p-10 p-6">
+      
+      <!-- Experiencia Profesional -->
       <section class="mb-10">
-        <h2 id="experience-title" class="text-2xl font-extrabold text-blue-600 mb-6 pb-2 border-b-4 border-blue-100">PROFESSIONAL EXPERIENCE</h2>
+        <h2 id="experience-title" data-key="experience_title" class="text-2xl font-extrabold text-blue-600 mb-6 pb-2 border-b-4 border-blue-100">PROFESSIONAL EXPERIENCE</h2>
         <div id="experience-content">
+          
+          <!-- Experiencia 1 -->
           <div class="mb-8 p-4 border border-gray-100 rounded-lg shadow-sm">
-            <h3 class="text-xl font-bold text-gray-900 mb-1">QA Automation Engineer</h3>
+            <h3 class="text-xl font-bold text-gray-900 mb-1" data-key="exp1_title">QA Automation Engineer</h3>
             <div class="flex justify-between items-center mb-1">
-              <p class="text-md text-gray-700 font-medium">FX Replay</p>
-              <span class="text-sm font-semibold text-blue-600">April 2025 - Now</span>
+              <p class="text-md text-gray-700 font-medium" data-key="exp1_company">FX Replay</p>
+              <span class="text-sm font-semibold text-blue-600" data-key="exp1_date">April 2025 - Now</span>
             </div>
-            <p class="text-sm italic text-gray-500 mb-3">remote (Santa Cruz, Bolivia)</p>
-            <p class="text-sm text-gray-600 mb-3">FX Replay provides backtesting & journaling tools for Forex and futures traders.</p>
-            <h4 class="font-semibold text-gray-800 mt-2">Responsibilities:</h4>
+            <p class="text-sm italic text-gray-500 mb-3" data-key="exp1_location">remote (Santa Cruz, Bolivia)</p>
+            <p class="text-sm text-gray-600 mb-3" data-key="exp1_desc">FX Replay provides backtesting & journaling tools for Forex and futures traders.</p>
+            <h4 class="font-semibold text-gray-800 mt-2" data-key="exp_resp_title">Responsibilities:</h4>
             <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
-              <li>Led automation of trading simulation workflows with <strong>Playwright</strong> + TypeScript (~95% core coverage).</li>
-              <li>API integration tests for market data endpoints (data integrity + real-time accuracy).</li>
-              <li>Continuous testing in <strong>GitHub Actions</strong> (−40% regression time).</li>
-              <li>Shift-left QA + BDD with <strong>Cucumber</strong>.</li>
+              <li data-key="exp1_resp_1">Led automation of trading simulation workflows with <strong>Playwright</strong> + TypeScript (~95% core coverage).</li>
+              <li data-key="exp1_resp_2">API integration tests for market data endpoints (data integrity + real-time accuracy).</li>
+              <li data-key="exp1_resp_3">Continuous testing in <strong>GitHub Actions</strong> (−40% regression time).</li>
+              <li data-key="exp1_resp_4">Shift-left QA + BDD with <strong>Cucumber</strong>.</li>
             </ul>
-            <h4 class="font-semibold text-gray-800 mt-3">Tools & Technologies:</h4>
-            <p class="text-sm text-gray-700">Playwright, Cypress, Cucumber • TypeScript, JavaScript • GitHub Actions • Linear, Jira • REST API, AWS CloudWatch.</p>
+            <h4 class="font-semibold text-gray-800 mt-3" data-key="exp_tools_title">Tools & Technologies:</h4>
+            <p class="text-sm text-gray-700" data-key="exp1_tools_desc">Playwright, Cypress, Cucumber • TypeScript, JavaScript • GitHub Actions • Linear, Jira • REST API, AWS CloudWatch.</p>
           </div>
 
-          <!-- PUZZLE TECH (exact text) -->
+          <!-- Experiencia 2 -->
           <div class="mb-8 p-4 border border-gray-100 rounded-lg shadow-sm">
-            <h3 class="text-xl font-bold text-gray-900 mb-1">QA Automation Engineer</h3>
+            <h3 class="text-xl font-bold text-gray-900 mb-1" data-key="exp2_title">QA Automation Engineer</h3>
             <div class="flex justify-between items-center mb-1">
-              <p class="text-md text-gray-700 font-medium">Puzzle Tech</p>
-              <span class="text-sm font-semibold text-blue-600">February 2023 - December 2024</span>
+              <p class="text-md text-gray-700 font-medium" data-key="exp2_company">Puzzle Tech</p>
+              <span class="text-sm font-semibold text-blue-600" data-key="exp2_date">February 2023 - December 2024</span>
             </div>
-            <p class="text-sm italic text-gray-500 mb-3">remote (Santa Cruz, Bolivia)</p>
-            <p class="text-sm text-gray-600 mb-3">Puzzle.tech is a staffing and talent sourcing company that specializes in connecting U.S. businesses with skilled technology professionals from Latin America. They focus on nearshore staffing solutions.</p>
-            <h4 class="font-semibold text-gray-800 mt-2">Responsibilities:</h4>
+            <p class="text-sm italic text-gray-500 mb-3" data-key="exp2_location">remote (Santa Cruz, Bolivia)</p>
+            <p class="text-sm text-gray-600 mb-3" data-key="exp2_desc">Puzzle.tech is a staffing and talent sourcing company that specializes in connecting U.S. businesses with skilled technology professionals from Latin America. They focus on nearshore staffing solutions.</p>
+            <h4 class="font-semibold text-gray-800 mt-2" data-key="exp_resp_title">Responsibilities:</h4>
             <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
-              <li>Designed and implemented test automation framework</li>
-              <li>Developed and maintained automated regression and cross-browser test scripts</li>
-              <li>Collaborated with cross-functional teams to define test strategies and ensure high-quality deliverables</li>
-              <li>Identified, reported, and tracked bugs</li>
-              <li>Functional Testing, Regression Testing, Smoke Testing, Sanity Testing</li>
+              <li data-key="exp2_resp_1">Designed and implemented test automation framework</li>
+              <li data-key="exp2_resp_2">Developed and maintained automated regression and cross-browser test scripts</li>
+              <li data-key="exp2_resp_3">Collaborated with cross-functional teams to define test strategies and ensure high-quality deliverables</li>
+              <li data-key="exp2_resp_4">Identified, reported, and tracked bugs</li>
+              <li data-key="exp2_resp_5">Functional Testing, Regression Testing, Smoke Testing, Sanity Testing</li>
             </ul>
-            <h4 class="font-semibold text-gray-800 mt-3">Tools & Technologies:</h4>
-            <p class="text-sm text-gray-700">Automation: Selenium, Appium, WebDriverIO, TestNG. Languages: Java, TypeScript. Mgmt: Jira, Quase. Other: BrowserStack, Postman (manual).</p>
+            <h4 class="font-semibold text-gray-800 mt-3" data-key="exp_tools_title">Tools & Technologies:</h4>
+            <p class="text-sm text-gray-700" data-key="exp2_tools_desc">Automation: Selenium, Appium, WebDriverIO, TestNG. Languages: Java, TypeScript. Mgmt: Jira, Quase. Other: BrowserStack, Postman (manual).</p>
           </div>
 
+          <!-- Experiencia 3 -->
           <div class="mb-8 p-4 border border-gray-100 rounded-lg shadow-sm">
-            <h3 class="text-xl font-bold text-gray-900 mb-1">QA Automation Engineer</h3>
+            <h3 class="text-xl font-bold text-gray-900 mb-1" data-key="exp3_title">QA Automation Engineer</h3>
             <div class="flex justify-between items-center mb-1">
-              <p class="text-md text-gray-700 font-medium">Oktana Corporation</p>
-              <span class="text-sm font-semibold text-blue-600">September 2021 - November 2022</span>
+              <p class="text-md text-gray-700 font-medium" data-key="exp3_company">Oktana Corporation</p>
+              <span class="text-sm font-semibold text-blue-600" data-key="exp3_date">September 2021 - November 2022</span>
             </div>
-            <p class="text-sm italic text-gray-500 mb-3">remote (Santa Cruz, Bolivia)</p>
-            <h4 class="font-semibold text-gray-800 mt-2">Responsibilities:</h4>
+            <p class="text-sm italic text-gray-500 mb-3" data-key="exp3_location">remote (Santa Cruz, Bolivia)</p>
+            <h4 class="font-semibold text-gray-800 mt-2" data-key="exp_resp_title">Responsibilities:</h4>
             <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
-              <li>Maintained and developed automated regression, performance, and cross-browser test scripts</li>
-              <li>Functional Testing, Regression Testing, UAT Testing, Smoke Testing, Sanity Testing</li>
-              <li>Optimized test coverage and maintained reusable test scripts for scalability and efficiency</li>
+              <li data-key="exp3_resp_1">Maintained and developed automated regression, performance, and cross-browser test scripts</li>
+              <li data-key="exp3_resp_2">Functional Testing, Regression Testing, UAT Testing, Smoke Testing, Sanity Testing</li>
+              <li data-key="exp3_resp_3">Optimized test coverage and maintained reusable test scripts for scalability and efficiency</li>
             </ul>
-            <h4 class="font-semibold text-gray-800 mt-3">Tools & Technologies:</h4>
-            <p class="text-sm text-gray-700">Selenium, TestNG. Languages: Java. Mgmt: Jira, TestRail. Other: Postman (manual), Api Testing with SOQL.</p>
+            <h4 class="font-semibold text-gray-800 mt-3" data-key="exp_tools_title">Tools & Technologies:</h4>
+            <p class="text-sm text-gray-700" data-key="exp3_tools_desc">Selenium, TestNG. Languages: Java. Mgmt: Jira, TestRail. Other: Postman (manual), Api Testing with SOQL.</p>
           </div>
 
+          <!-- Experiencia 4 -->
           <div class="mb-8 p-4 border border-gray-100 rounded-lg shadow-sm">
-            <h3 class="text-xl font-bold text-gray-900 mb-1">Archive Responsible and Technology Implementer</h3>
+            <h3 class="text-xl font-bold text-gray-900 mb-1" data-key="exp4_title">Archive Responsible and Technology Implementer</h3>
             <div class="flex justify-between items-center mb-1">
-              <p class="text-md text-gray-700 font-medium">Bolivian National Taxes</p>
-              <span class="text-sm font-semibold text-blue-600">February 2020 - November 2020</span>
+              <p class="text-md text-gray-700 font-medium" data-key="exp4_company">Bolivian National Taxes</p>
+              <span class="text-sm font-semibold text-blue-600" data-key="exp4_date">February 2020 - November 2020</span>
             </div>
-            <p class="text-sm italic text-gray-500 mb-3">Santa Cruz, Bolivia</p>
-            <h4 class="font-semibold text-gray-800 mt-2">Responsibilities:</h4>
+            <p class="text-sm italic text-gray-500 mb-3" data-key="exp4_location">Santa Cruz, Bolivia</p>
+            <h4 class="font-semibold text-gray-800 mt-2" data-key="exp_resp_title">Responsibilities:</h4>
             <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
-              <li>Organize and maintain taxpayer records within the Legal Coactive Collection Department</li>
-              <li>Creation, organization, and execution of the Filing Project. I led a team of 20 people</li>
-              <li>VBA script to automate manual large amount of excel files to then integrate them to the Software</li>
+              <li data-key="exp4_resp_1">Organize and maintain taxpayer records within the Legal Coactive Collection Department</li>
+              <li data-key="exp4_resp_2">Creation, organization, and execution of the Filing Project. I led a team of 20 people</li>
+              <li data-key="exp4_resp_3">VBA script to automate manual large amount of excel files to then integrate them to the Software</li>
             </ul>
-            <h4 class="font-semibold text-gray-800 mt-3">Tools & Technologies:</h4>
-            <p class="text-sm text-gray-700">QR Codes, National Taxes Software, VBA script.</p>
+            <h4 class="font-semibold text-gray-800 mt-3" data-key="exp_tools_title">Tools & Technologies:</h4>
+            <p class="text-sm text-gray-700" data-key="exp4_tools_desc">QR Codes, National Taxes Software, VBA script.</p>
           </div>
 
+          <!-- Experiencia 5 -->
           <div class="mb-8 p-4 border border-gray-100 rounded-lg shadow-sm">
-            <h3 class="text-xl font-bold text-gray-900 mb-1">Front‑End Developer and QA Manual Engineer</h3>
+            <h3 class="text-xl font-bold text-gray-900 mb-1" data-key="exp5_title">Front‑End Developer and QA Manual Engineer</h3>
             <div class="flex justify-between items-center mb-1">
-              <p class="text-md text-gray-700 font-medium">PuntoCom SRL</p>
-              <span class="text-sm font-semibold text-blue-600">June 2019 - January 2020</span>
+              <p class="text-md text-gray-700 font-medium" data-key="exp5_company">PuntoCom SRL</p>
+              <span class="text-sm font-semibold text-blue-600" data-key="exp5_date">June 2019 - January 2020</span>
             </div>
-            <p class="text-sm italic text-gray-500 mb-3">Santa Cruz, Bolivia</p>
-            <h4 class="font-semibold text-gray-800 mt-2">Responsibilities:</h4>
+            <p class="text-sm italic text-gray-500 mb-3" data-key="exp5_location">Santa Cruz, Bolivia</p>
+            <h4 class="font-semibold text-gray-800 mt-2" data-key="exp_resp_title">Responsibilities:</h4>
             <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
-              <li>Analyzed Feature Requirement Documents and Processes Flows</li>
-              <li>Communicated with Back-End developers to integrate Front-End information</li>
-              <li>Manual Testing for Features made from other developers</li>
+              <li data-key="exp5_resp_1">Analyzed Feature Requirement Documents and Processes Flows</li>
+              <li data-key="exp5_resp_2">Communicated with Back-End developers to integrate Front-End information</li>
+              <li data-key="exp5_resp_3">Manual Testing for Features made from other developers</li>
             </ul>
-            <h4 class="font-semibold text-gray-800 mt-3">Tools & Technologies:</h4>
-            <p class="text-sm text-gray-700">HTML 5, CSS 4, Javascript, TypeScript, Angular 7, Bootstrap, Jira.</p>
+            <h4 class="font-semibold text-gray-800 mt-3" data-key="exp_tools_title">Tools & Technologies:</h4>
+            <p class="text-sm text-gray-700" data-key="exp5_tools_desc">HTML 5, CSS 4, Javascript, TypeScript, Angular 7, Bootstrap, Jira.</p>
           </div>
 
+          <!-- Experiencia 6 -->
           <div class="mb-8 p-4 border border-gray-100 rounded-lg shadow-sm">
-            <h3 class="text-xl font-bold text-gray-900 mb-1">Front‑End Developer and QA Manual Engineer</h3>
+            <h3 class="text-xl font-bold text-gray-900 mb-1" data-key="exp6_title">Front‑End Developer and QA Manual Engineer</h3>
             <div class="flex justify-between items-center mb-1">
-              <p class="text-md text-gray-700 font-medium">Innovision SA (Oil and Gas Industry)</p>
-              <span class="text-sm font-semibold text-blue-600">July 2017 - May 2019</span>
+              <p class="text-md text-gray-700 font-medium" data-key="exp6_company">Innovision SA (Oil and Gas Industry)</p>
+              <span class="text-sm font-semibold text-blue-600" data-key="exp6_date">July 2017 - May 2019</span>
             </div>
-            <p class="text-sm italic text-gray-500 mb-3">Santa Cruz, Bolivia</p>
-            <h4 class="font-semibold text-gray-800 mt-2">Responsibilities:</h4>
+            <p class="text-sm italic text-gray-500 mb-3" data-key="exp6_location">Santa Cruz, Bolivia</p>
+            <h4 class="font-semibold text-gray-800 mt-2" data-key="exp_resp_title">Responsibilities:</h4>
             <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
-              <li>Analyzed Processes Flows and Feature Requirement Documents</li>
-              <li>Manual Testing for Features made from other developers</li>
-              <li>Software Development for Recoverable Costs and Oil and Gas Royalties</li>
+              <li data-key="exp6_resp_1">Analyzed Processes Flows and Feature Requirement Documents</li>
+              <li data-key="exp6_resp_2">Manual Testing for Features made from other developers</li>
+              <li data-key="exp6_resp_3">Software Development for Recoverable Costs and Oil and Gas Royalties</li>
             </ul>
-            <h4 class="font-semibold text-gray-800 mt-3">Tools & Technologies:</h4>
-            <p class="text-sm text-gray-700">HTML 5, CSS 4, Javascript, AngularJS, Bootstrap, JQuery, Jira.</p>
+            <h4 class="font-semibold text-gray-800 mt-3" data-key="exp_tools_title">Tools & Technologies:</h4>
+            <p class="text-sm text-gray-700" data-key="exp6_tools_desc">HTML 5, CSS 4, Javascript, AngularJS, Bootstrap, JQuery, Jira.</p>
           </div>
         </div>
       </section>
 
+      <!-- Educación -->
       <section class="mb-10">
-        <h2 id="education-title" class="text-2xl font-extrabold text-blue-600 mb-6 pb-2 border-b-4 border-blue-100">EDUCATION</h2>
+        <h2 id="education-title" data-key="education_title" class="text-2xl font-extrabold text-blue-600 mb-6 pb-2 border-b-4 border-blue-100">EDUCATION</h2>
         <div id="education-content">
+          
+          <!-- Educación 1 -->
           <div class="mb-6 p-4 border border-gray-100 rounded-lg shadow-sm">
-            <h3 class="text-xl font-bold text-gray-900 mb-1">Postgraduate Certificate in Higher Education (PGCHE)</h3>
-            <div class="flex justify-between items-center mb-1"><p class="text-md text-gray-700 font-medium">Private University Cumbre (UPC)</p><span class="text-sm font-semibold text-blue-600">March 2010 - November 2015</span></div>
-            <p class="text-sm italic text-gray-500">Santa Cruz, Bolivia</p>
+            <h3 class="text-xl font-bold text-gray-900 mb-1" data-key="edu1_title">Postgraduate Certificate in Higher Education (PGCHE)</h3>
+            <div class="flex justify-between items-center mb-1">
+              <p class="text-md text-gray-700 font-medium" data-key="edu1_school">Private University Cumbre (UPC)</p>
+              <span class="text-sm font-semibold text-blue-600" data-key="edu1_date">March 2010 - November 2015</span>
+            </div>
+            <p class="text-sm italic text-gray-500" data-key="edu1_location">Santa Cruz, Bolivia</p>
           </div>
+          
+          <!-- Educación 2 -->
           <div class="mb-6 p-4 border border-gray-100 rounded-lg shadow-sm">
-            <h3 class="text-xl font-bold text-gray-900 mb-1">Bachelor's Degree in Software Engineering</h3>
-            <div class="flex justify-between items-center mb-1"><p class="text-md text-gray-700 font-medium">Private University Cumbre (UPC)</p><span class="text-sm font-semibold text-blue-600">March 2010 - November 2015</span></div>
-            <p class="text-sm italic text-gray-500">Santa Cruz, Bolivia</p>
-            <h4 class="font-semibold text-gray-800 mt-2">Key Achievement:</h4>
+            <h3 class="text-xl font-bold text-gray-900 mb-1" data-key="edu2_title">Bachelor's Degree in Software Engineering</h3>
+            <div class="flex justify-between items-center mb-1">
+              <p class="text-md text-gray-700 font-medium" data-key="edu2_school">Private University Cumbre (UPC)</p>
+              <span class="text-sm font-semibold text-blue-600" data-key="edu2_date">March 2010 - November 2015</span>
+            </div>
+            <p class="text-sm italic text-gray-500" data-key="edu2_location">Santa Cruz, Bolivia</p>
+            <h4 class="font-semibold text-gray-800 mt-2" data-key="edu_ach_title">Key Achievement:</h4>
             <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
-              <li>Third place in the Fair of Science and Technology - Android app for visualizing courses for the different careers offered</li>
+              <li data-key="edu2_ach_1">Third place in the Fair of Science and Technology - Android app for visualizing courses for the different careers offered</li>
             </ul>
           </div>
+          
+          <!-- Educación 3 -->
           <div class="mb-6 p-4 border border-gray-100 rounded-lg shadow-sm">
-            <h3 class="text-xl font-bold text-gray-900 mb-1">Technical Degree in Cybernetics and Robotics</h3>
-            <div class="flex justify-between items-center mb-1"><p class="text-md text-gray-700 font-medium">Czech Technical University (CTU)</p><span class="text-sm font-semibold text-blue-600">September 2004 - December 2009</span></div>
-            <p class="text-sm italic text-gray-500">Prague, Czech Republic</p>
-            <h4 class="font-semibold text-gray-800 mt-2">Key Achievement:</h4>
+            <h3 class="text-xl font-bold text-gray-900 mb-1" data-key="edu3_title">Technical Degree in Cybernetics and Robotics</h3>
+            <div class="flex justify-between items-center mb-1">
+              <p class="text-md text-gray-700 font-medium" data-key="edu3_school">Czech Technical University (CTU)</p>
+              <span class="text-sm font-semibold text-blue-600" data-key="edu3_date">September 2004 - December 2009</span>
+            </div>
+            <p class="text-sm italic text-gray-500" data-key="edu3_location">Prague, Czech Republic</p>
+            <h4 class="font-semibold text-gray-800 mt-2" data-key="edu_ach_title">Key Achievement:</h4>
             <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
-              <li>Developed a prototype robotic arm controlled by EEG device, enabling direct interaction between human brain signals and robotic movements</li>
+              <li data-key="edu3_ach_1">Developed a prototype robotic arm controlled by EEG device, enabling direct interaction between human brain signals and robotic movements</li>
             </ul>
           </div>
         </div>
       </section>
 
+      <!-- Idiomas e Intereses -->
       <section class="mb-10">
-        <h2 class="text-2xl font-extrabold text-blue-600 mb-6 pb-2 border-b-4 border-blue-100">LANGUAGES & INTERESTS</h2>
+        <h2 class="text-2xl font-extrabold text-blue-600 mb-6 pb-2 border-b-4 border-blue-100" data-key="lang_int_title">LANGUAGES & INTERESTS</h2>
         <div class="grid md:grid-cols-2 gap-6">
           <div>
-            <h3 id="languages-title" class="text-xl font-bold text-gray-900 mb-3 border-b border-gray-200 pb-1">LANGUAGES</h3>
-            <div id="languages-list">
-              <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
-                <li>Spanish: Native</li>
-                <li>English: Proficient (B2)</li>
-                <li>Czech: Proficient</li>
-              </ul>
-            </div>
+            <h3 id="languages-title" data-key="languages_title" class="text-xl font-bold text-gray-900 mb-3 border-b border-gray-200 pb-1">LANGUAGES</h3>
+            <!-- Generado dinámicamente -->
+            <div id="languages-list"></div>
           </div>
           <div>
-            <h3 id="interests-title" class="text-xl font-bold text-gray-900 mb-3 border-b border-gray-200 pb-1">INTERESTS</h3>
-            <div id="interests-list">
-              <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
-                <li>Technology Books</li>
-                <li>Automation</li>
-                <li>Sports</li>
-                <li>Science</li>
-              </ul>
-            </div>
+            <h3 id="interests-title" data-key="interests_title" class="text-xl font-bold text-gray-900 mb-3 border-b border-gray-200 pb-1">INTERESTS</h3>
+            <!-- Generado dinámicamente -->
+            <div id="interests-list"></div>
           </div>
         </div>
       </section>
     </main>
   </div>
 
-  <!-- ===== i18n + skills + PDF (safe JS) ===== -->
+  <!-- ===== Script de Traducción y PDF (Actualizado) ===== -->
   <script>
     const translations = {
-      en:{title:"Roger Luis Ruiz Mahr - QA Automation Engineer",name:"ROGER LUIS RUIZ MAHR",job_title:"QA Automation Engineer",summary_title:"SUMMARY",experience_title:"PROFESSIONAL EXPERIENCE",education_title:"EDUCATION",languages_title:"LANGUAGES",interests_title:"INTERESTS",contact_title:"CONTACT",choose_lang:"choose your language:",download_pdf:"Download PDF",online_resume:"ONLINE RESUME",location:"Santa Cruz de la Sierra, Bolivia",summary_p1:"Dedicated Quality Assurance Automation Engineer with 3+ years of extensive experience in software automation testing and 5+ years in manual testing.",summary_p2:"Proven track record of delivering high-quality software solutions across diverse industries including construction, technology, and oil & gas. Expertise in developing robust automated testing strategies, improving product quality, and implementing efficient testing methodologies.",level_proficient:"Proficient",level_moderated:"Intermediate",level_beginner:"Beginner",lang_es:"Spanish: Native",lang_en:"English: Proficient (B2)",lang_cz:"Czech: Proficient",interest_tech_books:"Technology Books",interest_automation:"Automation",interest_sports:"Sports",interest_science:"Science"},
-      es:{title:"Roger Luis Ruiz Mahr - Ingeniero de Automatización QA",name:"ROGER LUIS RUIZ MAHR",job_title:"Ingeniero de Automatización QA",summary_title:"RESUMEN",experience_title:"EXPERIENCIA PROFESIONAL",education_title:"EDUCACIÓN",languages_title:"IDIOMAS",interests_title:"INTERESES",contact_title:"CONTACTO",choose_lang:"seleccione su idioma:",download_pdf:"Descargar PDF",online_resume:"CURRÍCULUM EN LÍNEA",location:"Santa Cruz de la Sierra, Bolivia",summary_p1:"Dedicado Ingeniero de Automatización de Control de Calidad con más de 3 años de amplia experiencia en pruebas de automatización de software y más de 5 años en pruebas manuales.",summary_p2:"Historial comprobado en la entrega de soluciones de software de alta calidad en diversas industrias, incluyendo construcción, tecnología y petróleo y gas. Experiencia en el desarrollo de estrategias sólidas de pruebas automatizadas, mejora de la calidad del producto e implementación de metodologías de prueba eficientes.",level_proficient:"Avanzado",level_moderated:"Intermedio",level_beginner:"Principiante",lang_es:"Español: Nativo",lang_en:"Inglés: Avanzado (B2)",lang_cz:"Checo: Avanzado",interest_tech_books:"Libros de Tecnología",interest_automation:"Automatización",interest_sports:"Deportes",interest_science:"Ciencia"},
-      cz:{title:"Roger Luis Ruiz Mahr - QA automatizační inženýr",name:"ROGER LUIS RUIZ MAHR",job_title:"QA automatizační inženýr",summary_title:"SHRNUTÍ",experience_title:"PRACOVNÍ ZKUŠENOSTI",education_title:"VZDĚLÁNÍ",languages_title:"JAZYKY",interests_title:"ZÁJMY",contact_title:"KONTAKT",choose_lang:"vyberte si jazyk:",download_pdf:"Stáhnout PDF",online_resume:"ONLINE ŽIVOTOPIS",location:"Santa Cruz de la Sierra, Bolívie",summary_p1:"Specializovaný QA automatizační inženýr s 3+ lety zkušeností v automatizovaném testování a 5+ lety v manuálním testování.",summary_p2:"Prokázané výsledky v dodávání kvalitních softwarových řešení napříč odvětvími včetně stavebnictví, technologií a ropného průmyslu.",level_proficient:"Pokročilý",level_moderated:"Středně pokročilý",level_beginner:"Začátečník",lang_es:"Španělština: Rodilý mluvčí",lang_en:"Angličtina: Pokročilý (B2)",lang_cz:"Čeština: Pokročilý",interest_tech_books:"Knihy o Technologiích",interest_automation:"Automatizace",interest_sports:"Sport",interest_science:"Věda"}
+      // INGLÉS (EN)
+      en: {
+        title: "Roger Luis Ruiz Mahr - QA Automation Engineer",
+        name: "ROGER LUIS RUIZ MAHR",
+        job_title: "QA Automation Engineer",
+        summary_title: "SUMMARY",
+        experience_title: "PROFESSIONAL EXPERIENCE",
+        education_title: "EDUCATION",
+        lang_int_title: "LANGUAGES & INTERESTS",
+        languages_title: "LANGUAGES",
+        interests_title: "INTERESTS",
+        contact_title: "CONTACT",
+        choose_lang: "choose your language:",
+        download_pdf: "Download PDF",
+        online_resume: "ONLINE RESUME",
+        location: "Santa Cruz de la Sierra, Bolivia",
+        summary_p1: "Dedicated Quality Assurance Automation Engineer with 3+ years of automation experience and 5+ years of manual testing.",
+        summary_p2: "Proven track record across construction, technology, and oil & gas. Strong in robust automated strategies, product quality, and efficient testing methodologies.",
+        level_proficient: "Proficient",
+        level_moderated: "Intermediate",
+        level_beginner: "Beginner",
+        lang_es: "Spanish: Native",
+        lang_en: "English: Proficient (B2)",
+        lang_cz: "Czech: Proficient",
+        interest_tech_books: "Technology Books",
+        interest_automation: "Automation",
+        interest_sports: "Sports",
+        interest_science: "Science",
+        exp_resp_title: "Responsibilities:",
+        exp_tools_title: "Tools & Technologies:",
+        edu_ach_title: "Key Achievement:",
+        exp1_title: "QA Automation Engineer",
+        exp1_company: "FX Replay",
+        exp1_date: "April 2025 - Now",
+        exp1_location: "remote (Santa Cruz, Bolivia)",
+        exp1_desc: "FX Replay provides backtesting & journaling tools for Forex and futures traders.",
+        exp1_resp_1: "Led automation of trading simulation workflows with <strong>Playwright</strong> + TypeScript (~95% core coverage).",
+        exp1_resp_2: "API integration tests for market data endpoints (data integrity + real-time accuracy).",
+        exp1_resp_3: "Continuous testing in <strong>GitHub Actions</strong> (−40% regression time).",
+        exp1_resp_4: "Shift-left QA + BDD with <strong>Cucumber</strong>.",
+        exp1_tools_desc: "Playwright, Cypress, Cucumber • TypeScript, JavaScript • GitHub Actions • Linear, Jira • REST API, AWS CloudWatch.",
+        exp2_title: "QA Automation Engineer",
+        exp2_company: "Puzzle Tech",
+        exp2_date: "February 2023 - December 2024",
+        exp2_location: "remote (Santa Cruz, Bolivia)",
+        exp2_desc: "Puzzle.tech is a staffing and talent sourcing company that specializes in connecting U.S. businesses with skilled technology professionals from Latin America. They focus on nearshore staffing solutions.",
+        exp2_resp_1: "Designed and implemented test automation framework",
+        exp2_resp_2: "Developed and maintained automated regression and cross-browser test scripts",
+        exp2_resp_3: "Collaborated with cross-functional teams to define test strategies and ensure high-quality deliverables",
+        exp2_resp_4: "Identified, reported, and tracked bugs",
+        exp2_resp_5: "Functional Testing, Regression Testing, Smoke Testing, Sanity Testing",
+        exp2_tools_desc: "Automation: Selenium, Appium, WebDriverIO, TestNG. Languages: Java, TypeScript. Mgmt: Jira, Quase. Other: BrowserStack, Postman (manual).",
+        exp3_title: "QA Automation Engineer",
+        exp3_company: "Oktana Corporation",
+        exp3_date: "September 2021 - November 2022",
+        exp3_location: "remote (Santa Cruz, Bolivia)",
+        exp3_resp_1: "Maintained and developed automated regression, performance, and cross-browser test scripts",
+        exp3_resp_2: "Functional Testing, Regression Testing, UAT Testing, Smoke Testing, Sanity Testing",
+        exp3_resp_3: "Optimized test coverage and maintained reusable test scripts for scalability and efficiency",
+        exp3_tools_desc: "Selenium, TestNG. Languages: Java. Mgmt: Jira, TestRail. Other: Postman (manual), Api Testing with SOQL.",
+        exp4_title: "Archive Responsible and Technology Implementer",
+        exp4_company: "Bolivian National Taxes",
+        exp4_date: "February 2020 - November 2020",
+        exp4_location: "Santa Cruz, Bolivia",
+        exp4_resp_1: "Organize and maintain taxpayer records within the Legal Coactive Collection Department",
+        exp4_resp_2: "Creation, organization, and execution of the Filing Project. I led a team of 20 people",
+        exp4_resp_3: "VBA script to automate manual large amount of excel files to then integrate them to the Software",
+        exp4_tools_desc: "QR Codes, National Taxes Software, VBA script.",
+        exp5_title: "Front‑End Developer and QA Manual Engineer",
+        exp5_company: "PuntoCom SRL",
+        exp5_date: "June 2019 - January 2020",
+        exp5_location: "Santa Cruz, Bolivia",
+        exp5_resp_1: "Analyzed Feature Requirement Documents and Processes Flows",
+        exp5_resp_2: "Communicated with Back-End developers to integrate Front-End information",
+        exp5_resp_3: "Manual Testing for Features made from other developers",
+        exp5_tools_desc: "HTML 5, CSS 4, Javascript, TypeScript, Angular 7, Bootstrap, Jira.",
+        exp6_title: "Front‑End Developer and QA Manual Engineer",
+        exp6_company: "Innovision SA (Oil and Gas Industry)",
+        exp6_date: "July 2017 - May 2019",
+        exp6_location: "Santa Cruz, Bolivia",
+        exp6_resp_1: "Analyzed Processes Flows and Feature Requirement Documents",
+        exp6_resp_2: "Manual Testing for Features made from other developers",
+        exp6_resp_3: "Software Development for Recoverable Costs and Oil and Gas Royalties",
+        exp6_tools_desc: "HTML 5, CSS 4, Javascript, AngularJS, Bootstrap, JQuery, Jira.",
+        edu1_title: "Postgraduate Certificate in Higher Education (PGCHE)",
+        edu1_school: "Private University Cumbre (UPC)",
+        edu1_date: "March 2010 - November 2015",
+        edu1_location: "Santa Cruz, Bolivia",
+        edu2_title: "Bachelor's Degree in Software Engineering",
+        edu2_school: "Private University Cumbre (UPC)",
+        edu2_date: "March 2010 - November 2015",
+        edu2_location: "Santa Cruz, Bolivia",
+        edu2_ach_1: "Third place in the Fair of Science and Technology - Android app for visualizing courses for the different careers offered",
+        edu3_title: "Technical Degree in Cybernetics and Robotics",
+        edu3_school: "Czech Technical University (CTU)",
+        edu3_date: "September 2004 - December 2009",
+        edu3_location: "Prague, Czech Republic",
+        edu3_ach_1: "Developed a prototype robotic arm controlled by EEG device, enabling direct interaction between human brain signals and robotic movements"
+      },
+      // ESPAÑOL (ES)
+      es: {
+        title: "Roger Luis Ruiz Mahr - Ingeniero de Automatización QA",
+        name: "ROGER LUIS RUIZ MAHR",
+        job_title: "Ingeniero de Automatización QA",
+        summary_title: "RESUMEN",
+        experience_title: "EXPERIENCIA PROFESIONAL",
+        education_title: "EDUCACIÓN",
+        lang_int_title: "IDIOMAS E INTERESES",
+        languages_title: "IDIOMAS",
+        interests_title: "INTERESES",
+        contact_title: "CONTACTO",
+        choose_lang: "seleccione su idioma:",
+        download_pdf: "Descargar PDF",
+        online_resume: "CURRÍCULUM EN LÍNEA",
+        location: "Santa Cruz de la Sierra, Bolivia",
+        summary_p1: "Ingeniero de Automatización de Calidad (QA) con más de 3 años de experiencia en automatización y más de 5 años en pruebas manuales.",
+        summary_p2: "Historial comprobado en industrias de construcción, tecnología y petróleo y gas. Sólido en estrategias de automatización robustas, calidad de producto y metodologías de prueba eficientes.",
+        level_proficient: "Avanzado",
+        level_moderated: "Intermedio",
+        level_beginner: "Principiante",
+        lang_es: "Español: Nativo",
+        lang_en: "Inglés: Avanzado (B2)",
+        lang_cz: "Checo: Avanzado",
+        interest_tech_books: "Libros de Tecnología",
+        interest_automation: "Automatización",
+        interest_sports: "Deportes",
+        interest_science: "Ciencia",
+        exp_resp_title: "Responsabilidades:",
+        exp_tools_title: "Herramientas y Tecnologías:",
+        edu_ach_title: "Logro Clave:",
+        exp1_title: "Ingeniero de Automatización QA",
+        exp1_company: "FX Replay",
+        exp1_date: "Abril 2025 - Actualidad",
+        exp1_location: "remoto (Santa Cruz, Bolivia)",
+        exp1_desc: "FX Replay proporciona herramientas de backtesting y diario para traders de Forex y futuros.",
+        exp1_resp_1: "Lideré la automatización de flujos de simulación de trading con <strong>Playwright</strong> + TypeScript (~95% de cobertura central).",
+        exp1_resp_2: "Pruebas de integración API para endpoints de datos de mercado (integridad de datos + precisión en tiempo real).",
+        exp1_resp_3: "Pruebas continuas en <strong>GitHub Actions</strong> (−40% de tiempo de regresión).",
+        exp1_resp_4: "QA 'Shift-left' + BDD con <strong>Cucumber</strong>.",
+        exp1_tools_desc: "Playwright, Cypress, Cucumber • TypeScript, JavaScript • GitHub Actions • Linear, Jira • REST API, AWS CloudWatch.",
+        exp2_title: "Ingeniero de Automatización QA",
+        exp2_company: "Puzzle Tech",
+        exp2_date: "Febrero 2023 - Diciembre 2024",
+        exp2_location: "remoto (Santa Cruz, Bolivia)",
+        exp2_desc: "Puzzle.tech es una empresa de dotación de personal y búsqueda de talento que conecta empresas de EE. UU. con profesionales de tecnología de América Latina.",
+        exp2_resp_1: "Diseñé e implementé un marco de automatización de pruebas",
+        exp2_resp_2: "Desarrollé y mantuve scripts de pruebas de regresión automatizadas y cross-browser",
+        exp2_resp_3: "Colaboré con equipos multifuncionales para definir estrategias de prueba y asegurar entregables de alta calidad",
+        exp2_resp_4: "Identifiqué, reporté y rastreé errores",
+        exp2_resp_5: "Pruebas Funcionales, Pruebas de Regresión, Pruebas de Humo, Pruebas de Sanidad",
+        exp2_tools_desc: "Automatización: Selenium, Appium, WebDriverIO, TestNG. Lenguajes: Java, TypeScript. Gestión: Jira, Quase. Otros: BrowserStack, Postman (manual).",
+        exp3_title: "Ingeniero de Automatización QA",
+        exp3_company: "Oktana Corporation",
+        exp3_date: "Septiembre 2021 - Noviembre 2022",
+        exp3_location: "remoto (Santa Cruz, Bolivia)",
+        exp3_resp_1: "Mantuve y desarrollé scripts de pruebas automatizadas de regresión, rendimiento y cross-browser",
+        exp3_resp_2: "Pruebas Funcionales, Pruebas de Regresión, Pruebas UAT, Pruebas de Humo, Pruebas de Sanidad",
+        exp3_resp_3: "Optimicé la cobertura de pruebas y mantuve scripts de prueba reutilizables para escalabilidad y eficiencia",
+        exp3_tools_desc: "Selenium, TestNG. Lenguajes: Java. Gestión: Jira, TestRail. Otros: Postman (manual), Pruebas de API con SOQL.",
+        exp4_title: "Responsable de Archivo e Implementador de Tecnología",
+        exp4_company: "Impuestos Nacionales de Bolivia",
+        exp4_date: "Febrero 2020 - Noviembre 2020",
+        exp4_location: "Santa Cruz, Bolivia",
+        exp4_resp_1: "Organicé y mantuve registros de contribuyentes dentro del Departamento de Cobranza Coactiva Legal",
+        exp4_resp_2: "Creación, organización y ejecución del Proyecto de Archivo. Lideré un equipo de 20 personas",
+        exp4_resp_3: "Script de VBA para automatizar una gran cantidad de archivos de Excel manuales para luego integrarlos al Software",
+        exp4_tools_desc: "Códigos QR, Software de Impuestos Nacionales, script de VBA.",
+        exp5_title: "Desarrollador Front‑End e Ingeniero QA Manual",
+        exp5_company: "PuntoCom SRL",
+        exp5_date: "Junio 2019 - Enero 2020",
+        exp5_location: "Santa Cruz, Bolivia",
+        exp5_resp_1: "Analicé Documentos de Requerimientos de Funcionalidades y Flujos de Procesos",
+        exp5_resp_2: "Comuniqué con desarrolladores Back-End para integrar información Front-End",
+        exp5_resp_3: "Pruebas Manuales para funcionalidades hechas por otros desarrolladores",
+        exp5_tools_desc: "HTML 5, CSS 4, Javascript, TypeScript, Angular 7, Bootstrap, Jira.",
+        exp6_title: "Desarrollador Front‑End e Ingeniero QA Manual",
+        exp6_company: "Innovision SA (Industria de Petróleo y Gas)",
+        exp6_date: "Julio 2017 - Mayo 2019",
+        exp6_location: "Santa Cruz, Bolivia",
+        exp6_resp_1: "Analicé Flujos de Procesos y Documentos de Requerimientos de Funcionalidades",
+        exp6_resp_2: "Pruebas Manuales para funcionalidades hechas por otros desarrolladores",
+        exp6_resp_3: "Desarrollo de Software para Costos Recuperables y Regalías de Petróleo y Gas",
+        exp6_tools_desc: "HTML 5, CSS 4, Javascript, AngularJS, Bootstrap, JQuery, Jira.",
+        edu1_title: "Diplomado en Educación Superior (PGCHE)",
+        edu1_school: "Universidad Privada Cumbre (UPC)",
+        edu1_date: "Marzo 2010 - Noviembre 2015",
+        edu1_location: "Santa Cruz, Bolivia",
+        edu2_title: "Licenciatura en Ingeniería de Software",
+        edu2_school: "Universidad Privada Cumbre (UPC)",
+        edu2_date: "Marzo 2010 - Noviembre 2015",
+        edu2_location: "Santa Cruz, Bolivia",
+        edu2_ach_1: "Tercer lugar en la Feria de Ciencia y Tecnología - Aplicación Android para visualizar cursos de las diferentes carreras ofrecidas",
+        edu3_title: "Grado Técnico en Cibernética y Robótica",
+        edu3_school: "Universidad Técnica Checa (CTU)",
+        edu3_date: "Septiembre 2004 - Diciembre 2009",
+        edu3_location: "Praga, República Checa",
+        edu3_ach_1: "Desarrollé un prototipo de brazo robótico controlado por dispositivo EEG, permitiendo la interacción directa entre señales cerebrales humanas y movimientos robóticos"
+      },
+      // CHECO (CZ)
+      cz: {
+        title: "Roger Luis Ruiz Mahr - QA automatizační inženýr",
+        name: "ROGER LUIS RUIZ MAHR",
+        job_title: "QA automatizační inženýr",
+        summary_title: "SHRNUTÍ",
+        experience_title: "PRACOVNÍ ZKUŠENOSTI",
+        education_title: "VZDĚLÁNÍ",
+        lang_int_title: "JAZYKY A ZÁJMY",
+        languages_title: "JAZYKY",
+        interests_title: "ZÁJMY",
+        contact_title: "KONTAKT",
+        choose_lang: "vyberte si jazyk:",
+        download_pdf: "Stáhnout PDF",
+        online_resume: "ONLINE ŽIVOTOPIS",
+        location: "Santa Cruz de la Sierra, Bolívie",
+        summary_p1: "Specializovaný QA automatizační inženýr s 3+ lety zkušeností v automatizaci a 5+ lety v manuálním testování.",
+        summary_p2: "Prokázané výsledky v odvětvích stavebnictví, technologií a ropného průmyslu. Silný v robustních automatizovaných strategiích, kvalitě produktů a efektivních testovacích metodikách.",
+        level_proficient: "Pokročilý",
+        level_moderated: "Středně pokročilý",
+        level_beginner: "Začátečník",
+        lang_es: "Španělština: Rodilý mluvčí",
+        lang_en: "Angličtina: Pokročilý (B2)",
+        lang_cz: "Čeština: Pokročilý",
+        interest_tech_books: "Knihy o Technologiích",
+        interest_automation: "Automatizace",
+        interest_sports: "Sport",
+        interest_science: "Věda",
+        exp_resp_title: "Odpovědnosti:",
+        exp_tools_title: "Nástroje a Technologie:",
+        edu_ach_title: "Klíčový Úspěch:",
+        exp1_title: "QA automatizační inženýr",
+        exp1_company: "FX Replay",
+        exp1_date: "Duben 2025 - Nyní",
+        exp1_location: "vzdáleně (Santa Cruz, Bolívie)",
+        exp1_desc: "FX Replay poskytuje nástroje pro backtesting a deníky pro obchodníky na Forexu a s futures.",
+        exp1_resp_1: "Vedl automatizaci pracovních postupů simulace obchodování pomocí <strong>Playwright</strong> + TypeScript (~95% pokrytí jádra).",
+        exp1_resp_2: "Integrační testy API pro koncové body tržních dat (integrita dat + přesnost v reálném čase).",
+        exp1_resp_3: "Průběžné testování v <strong>GitHub Actions</strong> (−40% regresního času).",
+        exp1_resp_4: "Shift-left QA + BDD s <strong>Cucumber</strong>.",
+        exp1_tools_desc: "Playwright, Cypress, Cucumber • TypeScript, JavaScript • GitHub Actions • Linear, Jira • REST API, AWS CloudWatch.",
+        exp2_title: "QA automatizační inženýr",
+        exp2_company: "Puzzle Tech",
+        exp2_date: "Únor 2023 - Prosinec 2024",
+        exp2_location: "vzdáleně (Santa Cruz, Bolívie)",
+        exp2_desc: "Puzzle.tech je společnost zabývající se náborem a vyhledáváním talentů, která spojuje americké firmy s kvalifikovanými technologickými profesionály z Latinské Ameriky.",
+        exp2_resp_1: "Navrhl a implementoval rámec pro automatizaci testů",
+        exp2_resp_2: "Vyvíjel a udržoval automatizované regresní a cross-browser testovací skripty",
+        exp2_resp_3: "Spolupracoval s multifunkčními týmy na definování testovacích strategií a zajištění vysoce kvalitních dodávek",
+        exp2_resp_4: "Identifikoval, hlásil a sledoval chyby",
+        exp2_resp_5: "Funkční testování, Regresní testování, Smoke testování, Sanity testování",
+        exp2_tools_desc: "Automatizace: Selenium, Appium, WebDriverIO, TestNG. Jazyky: Java, TypeScript. Správa: Jira, Quase. Ostatní: BrowserStack, Postman (manuální).",
+        exp3_title: "QA automatizační inženýr",
+        exp3_company: "Oktana Corporation",
+        exp3_date: "Září 2021 - Listopad 2022",
+        exp3_location: "vzdáleně (Santa Cruz, Bolívie)",
+        exp3_resp_1: "Udržoval a vyvíjel automatizované regresní, výkonnostní a cross-browser testovací skripty",
+        exp3_resp_2: "Funkční testování, Regresní testování, UAT testování, Smoke testování, Sanity testování",
+        exp3_resp_3: "Optimalizoval pokrytí testů a udržoval opakovaně použitelné testovací skripty pro škálovatelnost a efektivitu",
+        exp3_tools_desc: "Selenium, TestNG. Jazyky: Java. Správa: Jira, TestRail. Ostatní: Postman (manuální), Testování API pomocí SOQL.",
+        exp4_title: "Odpovědný za archiv a Implementátor technologií",
+        exp4_company: "Bolivijské národní daně",
+        exp4_date: "Únor 2020 - Listopad 2020",
+        exp4_location: "Santa Cruz, Bolívie",
+        exp4_resp_1: "Organizoval a udržoval záznamy daňových poplatníků v oddělení právního vymáhání pohledávek",
+        exp4_resp_2: "Vytvoření, organizace a provedení projektu archivace. Vedl jsem tým 20 lidí",
+        exp4_resp_3: "VBA skript pro automatizaci manuálního zpracování velkého množství excelových souborů pro jejich následnou integraci do softwaru",
+        exp4_tools_desc: "QR kódy, software národních daní, VBA skript.",
+        exp5_title: "Front‑End vývojář a Manuální QA inženýr",
+        exp5_company: "PuntoCom SRL",
+        exp5_date: "Červen 2019 - Leden 2020",
+        exp5_location: "Santa Cruz, Bolívie",
+        exp5_resp_1: "Analyzoval dokumenty požadavků na funkce a procesní toky",
+        exp5_resp_2: "Komunikoval s Back-End vývojáři pro integraci Front-End informací",
+        exp5_resp_3: "Manuální testování funkcí vytvořených jinými vývojáři",
+        exp5_tools_desc: "HTML 5, CSS 4, Javascript, TypeScript, Angular 7, Bootstrap, Jira.",
+        exp6_title: "Front‑End vývojář a Manuální QA inženýr",
+        exp6_company: "Innovision SA (Ropný a plynárenský průmysl)",
+        exp6_date: "Červenec 2017 - Květen 2019",
+        exp6_location: "Santa Cruz, Bolívie",
+        exp6_resp_1: "Analyzoval procesní toky a dokumenty požadavků na funkce",
+        exp6_resp_2: "Manuální testování funkcí vytvořených jinými vývojáři",
+        exp6_resp_3: "Vývoj softwaru pro vratné náklady a licenční poplatky za ropu a plyn",
+        exp6_tools_desc: "HTML 5, CSS 4, Javascript, AngularJS, Bootstrap, JQuery, Jira.",
+        edu1_title: "Postgraduální certifikát ve vysokoškolském vzdělávání (PGCHE)",
+        edu1_school: "Soukromá univerzita Cumbre (UPC)",
+        edu1_date: "Březen 2010 - Listopad 2015",
+        edu1_location: "Santa Cruz, Bolívie",
+        edu2_title: "Bakalářský titul v oboru softwarového inženýrství",
+        edu2_school: "Soukromá univerzita Cumbre (UPC)",
+        edu2_date: "Březen 2010 - Listopad 2015",
+        edu2_location: "Santa Cruz, Bolívie",
+        edu2_ach_1: "Třetí místo na Veletrhu vědy a techniky - Android aplikace pro vizualizaci kurzů pro různé nabízené obory",
+        edu3_title: "Technický titul v oboru Kybernetika a robotika",
+        edu3_school: "České vysoké učení technické (ČVUT)",
+        edu3_date: "Září 2004 - Prosinec 2009",
+        edu3_location: "Praha, Česká republika",
+        edu3_ach_1: "Vyvinul prototyp robotické paže ovládané EEG zařízením, umožňující přímou interakci mezi lidskými mozkovými signály a robotickými pohyby"
+      }
     };
 
     const skillsData = {
@@ -305,17 +613,32 @@
 
     function renderSkills(lang){
       const t = translations[lang];
-      const titles = {en:{frameworks:"AUTOMATION FRAMEWORKS",programming:"PROGRAMMING LANGUAGES",web:"WEB TECHNOLOGIES",databases:"DATABASES",additional:"ADDITIONAL SKILLS"},
-                      es:{frameworks:"MARCOS DE AUTOMATIZACIÓN",programming:"LENGUAJES DE PROGRAMACIÓN",web:"TECNOLOGÍAS WEB",databases:"BASES DE DATOS",additional:"HABILIDADES ADICIONALES"},
-                      cz:{frameworks:"AUTOMATIZAČNÍ RÁMCE",programming:"PROGRAMOVACÍ JAZYKY",web:"WEBOVÉ TECHNOLOGIE",databases:"DATABÁZE",additional:"DALŠÍ DOVEDNOSTI"}}[lang];
-      const levels = {proficient:t.level_proficient,moderated:t.level_moderated,beginner:t.level_beginner};
+      const titles = {
+        en: {frameworks: "AUTOMATION FRAMEWORKS", programming: "PROGRAMMING LANGUAGES", web: "WEB TECHNOLOGIES", databases: "DATABASES", additional: "ADDITIONAL SKILLS"},
+        es: {frameworks: "MARCOS DE AUTOMATIZACIÓN", programming: "LENGUAJES DE PROGRAMACIÓN", web: "TECNOLOGÍAS WEB", databases: "BASES DE DATOS", additional: "HABILIDADES ADICIONALES"},
+        cz: {frameworks: "AUTOMATIZAČNÍ RÁMCE", programming: "PROGRAMOVACÍ JAZYKY", web: "WEBOVÉ TECHNOLOGIE", databases: "DATABÁZE", additional: "DALŠÍ DOVEDNOSTI"}
+      }[lang];
+      
+      const levels = {
+        proficient: t.level_proficient,
+        moderated: t.level_moderated,
+        beginner: t.level_beginner
+      };
+      
       const el = document.getElementById('skills-section');
       let html = '';
-      const blocks = [ ['frameworks',skillsData.frameworks], ['programming',skillsData.programming], ['web',skillsData.web], ['databases',skillsData.databases], ['additional',skillsData.additional] ];
-      for(const [key,list] of blocks){
+      const blocks = [
+        ['frameworks', skillsData.frameworks],
+        ['programming', skillsData.programming],
+        ['web', skillsData.web],
+        ['databases', skillsData.databases],
+        ['additional', skillsData.additional]
+      ];
+      
+      for (const [key, list] of blocks) {
         html += `<h3 class="text-lg font-bold text-gray-800 mt-6 mb-3 border-b-2 border-gray-200 pb-1">${titles[key]}</h3>`;
-        for(const item of list){
-          const levelClass = item.level==='proficient'?'proficient':item.level==='moderated'?'moderated':'beginner';
+        for (const item of list) {
+          const levelClass = item.level === 'proficient' ? 'proficient' : item.level === 'moderated' ? 'moderated' : 'beginner';
           html += `
             <div class="mb-3">
               <div class="flex justify-between items-center text-sm">
@@ -329,48 +652,136 @@
       el.innerHTML = html;
     }
 
-    function setLanguage(lang){
+    /**
+     * Función setLanguage (ACTUALIZADA)
+     * Actualiza todo el texto de la página al idioma seleccionado.
+     */
+    function setLanguage(lang) {
+      // Obtener el objeto de traducción o usar 'en' por defecto
       const T = translations[lang] || translations.en;
+      
+      // Actualizar el título del documento
       document.title = T.title;
-      const map = [
-        ['online-resume-title','online_resume'],['name-header','name'],['job-title-header','job_title'],['summary-title','summary_title'],['experience-title','experience_title'],['education-title','education_title'],['languages-title','languages_title'],['interests-title','interests_title'],['contact-title','contact_title'],['choose-lang-text','choose_lang'],['download-pdf-btn','download_pdf']
-      ];
-      for(const [id,key] of map){ const el = document.getElementById(id); if(el) el.textContent = T[key]; }
-      const sp1=document.getElementById('summary-p1'); if(sp1) sp1.textContent=T.summary_p1;
-      const sp2=document.getElementById('summary-p2'); if(sp2) sp2.textContent=T.summary_p2;
-      const loc=document.getElementById('contact-location-link'); if(loc) loc.textContent=T.location;
-      document.getElementById('languages-list').innerHTML = `<ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4"><li>${T.lang_es}</li><li>${T.lang_en}</li><li>${T.lang_cz}</li></ul>`;
-      document.getElementById('interests-list').innerHTML = `<ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4"><li>${T.interest_tech_books}</li><li>${T.interest_automation}</li><li>${T.interest_sports}</li><li>${T.interest_science}</li></ul>`;
-      document.querySelectorAll('.language-link').forEach(a=>{a.classList.remove('active'); if(a.dataset.lang===lang) a.classList.add('active');});
+      
+      // Actualizar todos los elementos con el atributo [data-key]
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.dataset.key;
+        if (T[key]) {
+          // Usar innerHTML para permitir etiquetas como <strong>
+          el.innerHTML = T[key];
+        } else {
+          console.warn(`Clave de traducción faltante: ${key} en idioma ${lang}`);
+        }
+      });
+      
+      // Actualizar la lista de idiomas (generada dinámicamente)
+      const langListEl = document.getElementById('languages-list');
+      if (langListEl) {
+        langListEl.innerHTML = `<ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
+                                  <li>${T.lang_es}</li>
+                                  <li>${T.lang_en}</li>
+                                  <li>${T.lang_cz}</li>
+                                </ul>`;
+      }
+      
+      // Actualizar la lista de intereses (generada dinámicamente)
+      const interestListEl = document.getElementById('interests-list');
+      if (interestListEl) {
+        interestListEl.innerHTML = `<ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
+                                      <li>${T.interest_tech_books}</li>
+                                      <li>${T.interest_automation}</li>
+                                      <li>${T.interest_sports}</li>
+                                      <li>${T.interest_science}</li>
+                                    </ul>`;
+      }
+      
+      // Actualizar la clase 'active' en los enlaces de idioma
+      document.querySelectorAll('.language-link').forEach(a => {
+        a.classList.remove('active');
+        if (a.dataset.lang === lang) {
+          a.classList.add('active');
+        }
+      });
+      
+      // Volver a renderizar la sección de habilidades con el idioma correcto
       renderSkills(lang);
     }
 
-    function setupPDF(){
-      const btn=document.getElementById('download-pdf-btn');
-      btn.addEventListener('click', async ()=>{
+    /**
+     * Configura la funcionalidad de descarga de PDF.
+     */
+    function setupPDF() {
+      const btn = document.getElementById('download-pdf-btn');
+      if (!btn) return;
+
+      btn.addEventListener('click', async () => {
         const resumeElement = document.getElementById('resume-container');
-        const body = document.body; body.classList.add('pdf-generating');
-        const { jsPDF } = window.jspdf; const rect = resumeElement.getBoundingClientRect();
-        const w = rect.width; const h = resumeElement.scrollHeight;
-        try{
-          const left=document.getElementById('left-column'); const right=document.getElementById('right-column');
-          left.classList.remove('lg:overflow-y-scroll'); right.classList.remove('lg:overflow-y-scroll');
-          const canvas = await html2canvas(resumeElement,{scale:2,useCORS:true,logging:false,scrollX:0,scrollY:0,width:w,height:h,allowTaint:true,backgroundColor:'#ffffff'});
-          const img = canvas.toDataURL('image/jpeg',1.0);
-          const pdf = new jsPDF({orientation:'p',unit:'px',format:[w,h]});
-          pdf.addImage(img,'JPEG',0,0,w,h); pdf.save('Roger_Ruiz_Resume.pdf');
-        }catch(e){ console.error(e); }
-        finally{
-          document.getElementById('left-column').classList.add('lg:overflow-y-scroll');
-          document.getElementById('right-column').classList.add('lg:overflow-y-scroll');
+        const body = document.body;
+        body.classList.add('pdf-generating');
+        
+        const { jsPDF } = window.jspdf;
+        const rect = resumeElement.getBoundingClientRect();
+        const w = rect.width;
+        // Usar scrollHeight para capturar todo el contenido, incluso si está oculto por overflow
+        const h = resumeElement.scrollHeight; 
+        
+        try {
+          const left = document.getElementById('left-column');
+          const right = document.getElementById('right-column');
+          
+          // Quitar temporalmente el overflow-y-scroll para que html2canvas capture todo
+          left.classList.remove('lg:overflow-y-scroll');
+          right.classList.remove('lg:overflow-y-scroll');
+          
+          const canvas = await html2canvas(resumeElement, {
+            scale: 2, // Mejorar la resolución
+            useCORS: true,
+            logging: false,
+            scrollX: 0,
+            scrollY: 0,
+            width: w,
+            height: h, // Asegurarse de capturar la altura completa
+            allowTaint: true,
+            backgroundColor: '#ffffff'
+          });
+          
+          const img = canvas.toDataURL('image/jpeg', 1.0);
+          
+          // Crear PDF con las dimensiones del contenido
+          const pdf = new jsPDF({
+            orientation: 'p',
+            unit: 'px',
+            format: [w, h]
+          });
+          
+          pdf.addImage(img, 'JPEG', 0, 0, w, h);
+          pdf.save('Roger_Ruiz_Resume.pdf');
+          
+        } catch (e) {
+          console.error("Error al generar el PDF:", e);
+        } finally {
+          // Restaurar las clases de scroll
+          left.classList.add('lg:overflow-y-scroll');
+          right.classList.add('lg:overflow-y-scroll');
           body.classList.remove('pdf-generating');
         }
       });
     }
 
-    document.addEventListener('DOMContentLoaded', ()=>{
-      document.querySelectorAll('.language-link').forEach(a=>a.addEventListener('click',e=>{e.preventDefault(); setLanguage(e.currentTarget.dataset.lang);}));
+    // --- INICIALIZACIÓN ---
+    document.addEventListener('DOMContentLoaded', () => {
+      // Configurar los botones de idioma
+      document.querySelectorAll('.language-link').forEach(a => {
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          setLanguage(e.currentTarget.dataset.lang);
+        });
+      });
+      
+      // Establecer el idioma inicial
       setLanguage('en');
+      
+      // Configurar el botón de PDF
       setupPDF();
     });
   </script>
