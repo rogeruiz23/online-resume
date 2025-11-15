@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="resume-title">Roger Luis Ruiz Mahr - QA Automation Engineer</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- PDF libs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <style>
+    :root { --primary:#1F2937; --secondary:#2563EB; --light-bg:#F9FAFB; }
+    html,body{min-height:100%}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--light-bg);line-height:1.6;padding:1rem;display:flex;flex-direction:column}
+    .resume-container{max-width:1400px}
+    @media (min-width:1024px){.resume-container{height:calc(100vh - 2rem);display:grid;grid-template-columns:520px 1fr;gap:2rem}}
+    .skill-bar-container{background:#E5E7EB;border-radius:9999px;height:8px;overflow:hidden;margin-top:4px}
+    .skill-bar{height:100%;border-radius:9999px;transition:width .5s ease-in-out}
+    .proficient{width:90%;background:var(--secondary)}
+    .moderated{width:60%;background:#FBBF24}
+    .beginner{width:30%;background:#9CA3AF}
+    .language-link.active{font-weight:700;color:var(--secondary);border-bottom:2px solid var(--secondary)}
+    .language-link:not(.active){color:#9CA3AF}
+    .no-print{display:block}
+    .pdf-generating .no-print{display:none!important}
+    .pdf-generating #resume-container{margin:0!important;padding:0!important;box-shadow:none!important;border-radius:0!important;height:auto!important}
+  </style>
+</head>
+<body class="antialiased p-4 sm:p-8 lg:p-4">
+
+  <!-- ===== Static fallback content so the page always renders ===== -->
+  <div id="resume-container" class="bg-white rounded-xl shadow-2xl mx-auto w-full lg:max-w-7xl lg:h-[calc(100vh-2rem)] resume-container">
+
+    <!-- LEFT -->
+    <aside id="left-column" class="lg:h-full lg:overflow-y-scroll bg-gray-50 p-6 rounded-lg shadow-inner mb-8 lg:mb-0">
+      <div class="text-center mb-8">
+        <h3 id="online-resume-title" class="text-xl font-semibold text-blue-600 mb-4">ONLINE RESUME</h3>
+        <img id="profile-picture" src="https://i.imgur.com/MC5Vdc8.jpeg" alt="Roger Luis Ruiz Mahr" class="w-40 h-40 rounded-full mx-auto object-cover border-4 border-white shadow-lg mt-4 mb-4" onerror="this.onerror=null;this.src='https://placehold.co/160x160/9CA3AF/FFFFFF?text=R+R'" />
+        <h1 id="name-header" class="text-3xl font-extrabold text-gray-900 leading-tight whitespace-nowrap">rosher LUIS RUIZ MAHR</h1>
+        <h2 id="job-title-header" class="text-xl font-semibold text-blue-600 mt-1">QA Automation Engineer</h2>
+      </div>
+
+      <div class="flex justify-center space-x-4 mb-6 text-sm font-medium no-print">
+        <span id="choose-lang-text" class="text-gray-500">choose your language:</span>
+        <a href="#" data-lang="en" class="language-link text-blue-600">English</a>
+        <a href="#" data-lang="es" class="language-link">Spanish</a>
+        <a href="#" data-lang="cz" class="language-link">Czech</a>
+      </div>
+      
+      <div class="flex justify-center space-x-4 mb-8 no-print">
+        <button id="download-pdf-btn" class="px-4 py-2 bg-blue-600 text-white border border-blue-600 text-sm font-semibold rounded-lg hover:bg-blue-700 transition shadow-md">Download PDF</button>
+      </div>
+
+      <!-- Contact (static fallback) -->
+      <div id="contact-info-container" class="mb-8 p-4 border-t border-b border-gray-200">
+        <h3 id="contact-title" class="text-lg font-bold text-gray-800 mb-3">CONTACT</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li class="flex items-center">
+            <svg class="w-5 h-5 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <a id="contact-location-link" href="https://www.google.com/maps/search/?api=1&query=Santa%20Cruz%20de%20la%20Sierra%2C%20Bolivia" target="_blank" class="hover:text-blue-600">Santa Cruz de la Sierra, Bolivia</a>
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <a id="contact-phone-link" href="https://wa.me/59171055511" target="_blank" class="hover:text-blue-600">+59171055511</a>
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <a id="contact-email-link" href="mailto:roger.ruiz.21@gmail.com" class="hover:text-blue-600">roger.ruiz.21@gmail.com</a>
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.05-.87 1.9-1.95 1.9S1.08 4.55 1.08 3.5 1.95 1.6 3.03 1.6s1.95.85 1.95 1.9zM5 24V9h-4v15h4zM16.5 8.9c-2.43 0-3.98 1.35-4.75 2.5v-2.5h-4v15h4V14.5c0-.9.23-1.6.95-2.1.72-.5 1.6-.7 2.45-.7 3.52 0 4.15 2.65 4.15 5.5V24h4V17.3c0-4.6-2.5-7.7-6.2-7.7z"/></svg>
+            <a href="https://linkedin.com/in/roger-luis-ruiz-mahr-1242001ba/" target="_blank" class="truncate hover:text-blue-600">linkedin.com/in/roger-luis-ruiz-mahr-1242001ba/</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Summary -->
+      <div class="mb-8">
+        <h3 id="summary-title" class="text-lg font-bold text-gray-800 mb-3 border-b-2 border-gray-200 pb-1">SUMMARY</h3>
+        <p id="summary-p1" class="text-sm text-gray-700 mb-3">Dedicated Quality Assurance Automation Engineer with 3+ years of automation experience and 5+ years of manual testing.</p>
+        <p id="summary-p2" class="text-sm text-gray-700">Proven track record across construction, technology, and oil & gas. Strong in robust automated strategies, product quality, and efficient testing methodologies.</p>
+      </div>
+
+      <!-- Skills -->
+      <div id="skills-section"></div>
+    </aside>
+
+    <!-- RIGHT -->
+    <main id="right-column" class="lg:h-full lg:overflow-y-scroll lg:p-10 p-6">
+      <section class="mb-10">
+        <h2 id="experience-title" class="text-2xl font-extrabold text-blue-600 mb-6 pb-2 border-b-4 border-blue-100">PROFESSIONAL EXPERIENCE</h2>
+        <div id="experience-content">
+          <div class="mb-8 p-4 border border-gray-100 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-1">QA Automation Engineer</h3>
+            <div class="flex justify-between items-center mb-1">
+              <p class="text-md text-gray-700 font-medium">FX Replay</p>
+              <span class="text-sm font-semibold text-blue-600">April 2025 - Now</span>
+            </div>
+            <p class="text-sm italic text-gray-500 mb-3">remote (Santa Cruz, Bolivia)</p>
+            <p class="text-sm text-gray-600 mb-3">FX Replay provides backtesting & journaling tools for Forex and futures traders.</p>
+            <h4 class="font-semibold text-gray-800 mt-2">Responsibilities:</h4>
+            <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
+              <li>Led automation of trading simulation workflows with <strong>Playwright</strong> + TypeScript (~95% core coverage).</li>
+              <li>API integration tests for market data endpoints (data integrity + real-time accuracy).</li>
+              <li>Continuous testing in <strong>GitHub Actions</strong> (−40% regression time).</li>
+              <li>Shift-left QA + BDD with <strong>Cucumber</strong>.</li>
+            </ul>
+            <h4 class="font-semibold text-gray-800 mt-3">Tools & Technologies:</h4>
+            <p class="text-sm text-gray-700">Playwright, Cypress, Cucumber • TypeScript, JavaScript • GitHub Actions • Linear, Jira • REST API, AWS CloudWatch.</p>
+          </div>
+
+          <!-- PUZZLE TECH (exact text) -->
+          <div class="mb-8 p-4 border border-gray-100 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-1">QA Automation Engineer</h3>
+            <div class="flex justify-between items-center mb-1">
+              <p class="text-md text-gray-700 font-medium">Puzzle Tech</p>
+              <span class="text-sm font-semibold text-blue-600">February 2023 - December 2024</span>
+            </div>
+            <p class="text-sm italic text-gray-500 mb-3">remote (Santa Cruz, Bolivia)</p>
+            <p class="text-sm text-gray-600 mb-3">Puzzle.tech is a staffing and talent sourcing company that specializes in connecting U.S. businesses with skilled technology professionals from Latin America. They focus on nearshore staffing solutions.</p>
+            <h4 class="font-semibold text-gray-800 mt-2">Responsibilities:</h4>
+            <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
+              <li>Designed and implemented test automation framework</li>
+              <li>Developed and maintained automated regression and cross-browser test scripts</li>
+              <li>Collaborated with cross-functional teams to define test strategies and ensure high-quality deliverables</li>
+              <li>Identified, reported, and tracked bugs</li>
+              <li>Functional Testing, Regression Testing, Smoke Testing, Sanity Testing</li>
+            </ul>
+            <h4 class="font-semibold text-gray-800 mt-3">Tools & Technologies:</h4>
+            <p class="text-sm text-gray-700">Automation: Selenium, Appium, WebDriverIO, TestNG. Languages: Java, TypeScript. Mgmt: Jira, Quase. Other: BrowserStack, Postman (manual).</p>
+          </div>
+
+          <div class="mb-8 p-4 border border-gray-100 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-1">QA Automation Engineer</h3>
+            <div class="flex justify-between items-center mb-1">
+              <p class="text-md text-gray-700 font-medium">Oktana Corporation</p>
+              <span class="text-sm font-semibold text-blue-600">September 2021 - November 2022</span>
+            </div>
+            <p class="text-sm italic text-gray-500 mb-3">remote (Santa Cruz, Bolivia)</p>
+            <h4 class="font-semibold text-gray-800 mt-2">Responsibilities:</h4>
+            <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
+              <li>Maintained and developed automated regression, performance, and cross-browser test scripts</li>
+              <li>Functional Testing, Regression Testing, UAT Testing, Smoke Testing, Sanity Testing</li>
+              <li>Optimized test coverage and maintained reusable test scripts for scalability and efficiency</li>
+            </ul>
+            <h4 class="font-semibold text-gray-800 mt-3">Tools & Technologies:</h4>
+            <p class="text-sm text-gray-700">Selenium, TestNG. Languages: Java. Mgmt: Jira, TestRail. Other: Postman (manual), Api Testing with SOQL.</p>
+          </div>
+
+          <div class="mb-8 p-4 border border-gray-100 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Archive Responsible and Technology Implementer</h3>
+            <div class="flex justify-between items-center mb-1">
+              <p class="text-md text-gray-700 font-medium">Bolivian National Taxes</p>
+              <span class="text-sm font-semibold text-blue-600">February 2020 - November 2020</span>
+            </div>
+            <p class="text-sm italic text-gray-500 mb-3">Santa Cruz, Bolivia</p>
+            <h4 class="font-semibold text-gray-800 mt-2">Responsibilities:</h4>
+            <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
+              <li>Organize and maintain taxpayer records within the Legal Coactive Collection Department</li>
+              <li>Creation, organization, and execution of the Filing Project. I led a team of 20 people</li>
+              <li>VBA script to automate manual large amount of excel files to then integrate them to the Software</li>
+            </ul>
+            <h4 class="font-semibold text-gray-800 mt-3">Tools & Technologies:</h4>
+            <p class="text-sm text-gray-700">QR Codes, National Taxes Software, VBA script.</p>
+          </div>
+
+          <div class="mb-8 p-4 border border-gray-100 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Front‑End Developer and QA Manual Engineer</h3>
+            <div class="flex justify-between items-center mb-1">
+              <p class="text-md text-gray-700 font-medium">PuntoCom SRL</p>
+              <span class="text-sm font-semibold text-blue-600">June 2019 - January 2020</span>
+            </div>
+            <p class="text-sm italic text-gray-500 mb-3">Santa Cruz, Bolivia</p>
+            <h4 class="font-semibold text-gray-800 mt-2">Responsibilities:</h4>
+            <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
+              <li>Analyzed Feature Requirement Documents and Processes Flows</li>
+              <li>Communicated with Back-End developers to integrate Front-End information</li>
+              <li>Manual Testing for Features made from other developers</li>
+            </ul>
+            <h4 class="font-semibold text-gray-800 mt-3">Tools & Technologies:</h4>
+            <p class="text-sm text-gray-700">HTML 5, CSS 4, Javascript, TypeScript, Angular 7, Bootstrap, Jira.</p>
+          </div>
+
+          <div class="mb-8 p-4 border border-gray-100 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Front‑End Developer and QA Manual Engineer</h3>
+            <div class="flex justify-between items-center mb-1">
+              <p class="text-md text-gray-700 font-medium">Innovision SA (Oil and Gas Industry)</p>
+              <span class="text-sm font-semibold text-blue-600">July 2017 - May 2019</span>
+            </div>
+            <p class="text-sm italic text-gray-500 mb-3">Santa Cruz, Bolivia</p>
+            <h4 class="font-semibold text-gray-800 mt-2">Responsibilities:</h4>
+            <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
+              <li>Analyzed Processes Flows and Feature Requirement Documents</li>
+              <li>Manual Testing for Features made from other developers</li>
+              <li>Software Development for Recoverable Costs and Oil and Gas Royalties</li>
+            </ul>
+            <h4 class="font-semibold text-gray-800 mt-3">Tools & Technologies:</h4>
+            <p class="text-sm text-gray-700">HTML 5, CSS 4, Javascript, AngularJS, Bootstrap, JQuery, Jira.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 id="education-title" class="text-2xl font-extrabold text-blue-600 mb-6 pb-2 border-b-4 border-blue-100">EDUCATION</h2>
+        <div id="education-content">
+          <div class="mb-6 p-4 border border-gray-100 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Postgraduate Certificate in Higher Education (PGCHE)</h3>
+            <div class="flex justify-between items-center mb-1"><p class="text-md text-gray-700 font-medium">Private University Cumbre (UPC)</p><span class="text-sm font-semibold text-blue-600">March 2010 - November 2015</span></div>
+            <p class="text-sm italic text-gray-500">Santa Cruz, Bolivia</p>
+          </div>
+          <div class="mb-6 p-4 border border-gray-100 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Bachelor's Degree in Software Engineering</h3>
+            <div class="flex justify-between items-center mb-1"><p class="text-md text-gray-700 font-medium">Private University Cumbre (UPC)</p><span class="text-sm font-semibold text-blue-600">March 2010 - November 2015</span></div>
+            <p class="text-sm italic text-gray-500">Santa Cruz, Bolivia</p>
+            <h4 class="font-semibold text-gray-800 mt-2">Key Achievement:</h4>
+            <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
+              <li>Third place in the Fair of Science and Technology - Android app for visualizing courses for the different careers offered</li>
+            </ul>
+          </div>
+          <div class="mb-6 p-4 border border-gray-100 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Technical Degree in Cybernetics and Robotics</h3>
+            <div class="flex justify-between items-center mb-1"><p class="text-md text-gray-700 font-medium">Czech Technical University (CTU)</p><span class="text-sm font-semibold text-blue-600">September 2004 - December 2009</span></div>
+            <p class="text-sm italic text-gray-500">Prague, Czech Republic</p>
+            <h4 class="font-semibold text-gray-800 mt-2">Key Achievement:</h4>
+            <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
+              <li>Developed a prototype robotic arm controlled by EEG device, enabling direct interaction between human brain signals and robotic movements</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-2xl font-extrabold text-blue-600 mb-6 pb-2 border-b-4 border-blue-100">LANGUAGES & INTERESTS</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 id="languages-title" class="text-xl font-bold text-gray-900 mb-3 border-b border-gray-200 pb-1">LANGUAGES</h3>
+            <div id="languages-list">
+              <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
+                <li>Spanish: Native</li>
+                <li>English: Proficient (B2)</li>
+                <li>Czech: Proficient</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h3 id="interests-title" class="text-xl font-bold text-gray-900 mb-3 border-b border-gray-200 pb-1">INTERESTS</h3>
+            <div id="interests-list">
+              <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
+                <li>Technology Books</li>
+                <li>Automation</li>
+                <li>Sports</li>
+                <li>Science</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ===== i18n + skills + PDF (safe JS) ===== -->
+  <script>
+    const translations = {
+      en:{title:"Roger Luis Ruiz Mahr - QA Automation Engineer",name:"ROGER LUIS RUIZ MAHR",job_title:"QA Automation Engineer",summary_title:"SUMMARY",experience_title:"PROFESSIONAL EXPERIENCE",education_title:"EDUCATION",languages_title:"LANGUAGES",interests_title:"INTERESTS",contact_title:"CONTACT",choose_lang:"choose your language:",download_pdf:"Download PDF",online_resume:"ONLINE RESUME",location:"Santa Cruz de la Sierra, Bolivia",summary_p1:"Dedicated Quality Assurance Automation Engineer with 3+ years of extensive experience in software automation testing and 5+ years in manual testing.",summary_p2:"Proven track record of delivering high-quality software solutions across diverse industries including construction, technology, and oil & gas. Expertise in developing robust automated testing strategies, improving product quality, and implementing efficient testing methodologies.",level_proficient:"Proficient",level_moderated:"Intermediate",level_beginner:"Beginner",lang_es:"Spanish: Native",lang_en:"English: Proficient (B2)",lang_cz:"Czech: Proficient",interest_tech_books:"Technology Books",interest_automation:"Automation",interest_sports:"Sports",interest_science:"Science"},
+      es:{title:"Roger Luis Ruiz Mahr - Ingeniero de Automatización QA",name:"ROGER LUIS RUIZ MAHR",job_title:"Ingeniero de Automatización QA",summary_title:"RESUMEN",experience_title:"EXPERIENCIA PROFESIONAL",education_title:"EDUCACIÓN",languages_title:"IDIOMAS",interests_title:"INTERESES",contact_title:"CONTACTO",choose_lang:"seleccione su idioma:",download_pdf:"Descargar PDF",online_resume:"CURRÍCULUM EN LÍNEA",location:"Santa Cruz de la Sierra, Bolivia",summary_p1:"Dedicado Ingeniero de Automatización de Control de Calidad con más de 3 años de amplia experiencia en pruebas de automatización de software y más de 5 años en pruebas manuales.",summary_p2:"Historial comprobado en la entrega de soluciones de software de alta calidad en diversas industrias, incluyendo construcción, tecnología y petróleo y gas. Experiencia en el desarrollo de estrategias sólidas de pruebas automatizadas, mejora de la calidad del producto e implementación de metodologías de prueba eficientes.",level_proficient:"Avanzado",level_moderated:"Intermedio",level_beginner:"Principiante",lang_es:"Español: Nativo",lang_en:"Inglés: Avanzado (B2)",lang_cz:"Checo: Avanzado",interest_tech_books:"Libros de Tecnología",interest_automation:"Automatización",interest_sports:"Deportes",interest_science:"Ciencia"},
+      cz:{title:"Roger Luis Ruiz Mahr - QA automatizační inženýr",name:"ROGER LUIS RUIZ MAHR",job_title:"QA automatizační inženýr",summary_title:"SHRNUTÍ",experience_title:"PRACOVNÍ ZKUŠENOSTI",education_title:"VZDĚLÁNÍ",languages_title:"JAZYKY",interests_title:"ZÁJMY",contact_title:"KONTAKT",choose_lang:"vyberte si jazyk:",download_pdf:"Stáhnout PDF",online_resume:"ONLINE ŽIVOTOPIS",location:"Santa Cruz de la Sierra, Bolívie",summary_p1:"Specializovaný QA automatizační inženýr s 3+ lety zkušeností v automatizovaném testování a 5+ lety v manuálním testování.",summary_p2:"Prokázané výsledky v dodávání kvalitních softwarových řešení napříč odvětvími včetně stavebnictví, technologií a ropného průmyslu.",level_proficient:"Pokročilý",level_moderated:"Středně pokročilý",level_beginner:"Začátečník",lang_es:"Španělština: Rodilý mluvčí",lang_en:"Angličtina: Pokročilý (B2)",lang_cz:"Čeština: Pokročilý",interest_tech_books:"Knihy o Technologiích",interest_automation:"Automatizace",interest_sports:"Sport",interest_science:"Věda"}
+    };
+
+    const skillsData = {
+      frameworks:[
+        {name:"Selenium",level:"proficient"},
+        {name:"Cucumber",level:"proficient"},
+        {name:"WebdriverIO",level:"proficient"},
+        {name:"Appium",level:"proficient"},
+        {name:"Playwright",level:"moderated"}
+      ],
+      programming:[
+        {name:"JavaScript",level:"proficient"},
+        {name:"TypeScript",level:"proficient"},
+        {name:"Java",level:"proficient"},
+        {name:"Python",level:"beginner"},
+        {name:"C#",level:"moderated"}
+      ],
+      web:[
+        {name:"HTML 5",level:"proficient"},
+        {name:"CSS 4",level:"proficient"},
+        {name:"jQuery",level:"proficient"},
+        {name:"Bootstrap",level:"proficient"},
+        {name:"Angular 7",level:"moderated"},
+        {name:"AngularJS",level:"moderated"}
+      ],
+      databases:[
+        {name:"Postgres",level:"proficient"},
+        {name:"SQL",level:"proficient"},
+        {name:"MySQL",level:"proficient"}
+      ],
+      additional:[
+        {name:"UML",level:"moderated"},
+        {name:"Arduino",level:"proficient"},
+        {name:"Mobile Testing",level:"proficient"},
+        {name:"Scrum",level:"proficient"}
+      ]
+    };
+
+    function renderSkills(lang){
+      const t = translations[lang];
+      const titles = {en:{frameworks:"AUTOMATION FRAMEWORKS",programming:"PROGRAMMING LANGUAGES",web:"WEB TECHNOLOGIES",databases:"DATABASES",additional:"ADDITIONAL SKILLS"},
+                      es:{frameworks:"MARCOS DE AUTOMATIZACIÓN",programming:"LENGUAJES DE PROGRAMACIÓN",web:"TECNOLOGÍAS WEB",databases:"BASES DE DATOS",additional:"HABILIDADES ADICIONALES"},
+                      cz:{frameworks:"AUTOMATIZAČNÍ RÁMCE",programming:"PROGRAMOVACÍ JAZYKY",web:"WEBOVÉ TECHNOLOGIE",databases:"DATABÁZE",additional:"DALŠÍ DOVEDNOSTI"}}[lang];
+      const levels = {proficient:t.level_proficient,moderated:t.level_moderated,beginner:t.level_beginner};
+      const el = document.getElementById('skills-section');
+      let html = '';
+      const blocks = [ ['frameworks',skillsData.frameworks], ['programming',skillsData.programming], ['web',skillsData.web], ['databases',skillsData.databases], ['additional',skillsData.additional] ];
+      for(const [key,list] of blocks){
+        html += `<h3 class="text-lg font-bold text-gray-800 mt-6 mb-3 border-b-2 border-gray-200 pb-1">${titles[key]}</h3>`;
+        for(const item of list){
+          const levelClass = item.level==='proficient'?'proficient':item.level==='moderated'?'moderated':'beginner';
+          html += `
+            <div class="mb-3">
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-medium text-gray-700">${item.name}</span>
+                <span class="text-xs text-gray-500">${levels[item.level]}</span>
+              </div>
+              <div class="skill-bar-container"><div class="skill-bar ${levelClass}"></div></div>
+            </div>`;
+        }
+      }
+      el.innerHTML = html;
+    }
+
+    function setLanguage(lang){
+      const T = translations[lang] || translations.en;
+      document.title = T.title;
+      const map = [
+        ['online-resume-title','online_resume'],['name-header','name'],['job-title-header','job_title'],['summary-title','summary_title'],['experience-title','experience_title'],['education-title','education_title'],['languages-title','languages_title'],['interests-title','interests_title'],['contact-title','contact_title'],['choose-lang-text','choose_lang'],['download-pdf-btn','download_pdf']
+      ];
+      for(const [id,key] of map){ const el = document.getElementById(id); if(el) el.textContent = T[key]; }
+      const sp1=document.getElementById('summary-p1'); if(sp1) sp1.textContent=T.summary_p1;
+      const sp2=document.getElementById('summary-p2'); if(sp2) sp2.textContent=T.summary_p2;
+      const loc=document.getElementById('contact-location-link'); if(loc) loc.textContent=T.location;
+      document.getElementById('languages-list').innerHTML = `<ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4"><li>${T.lang_es}</li><li>${T.lang_en}</li><li>${T.lang_cz}</li></ul>`;
+      document.getElementById('interests-list').innerHTML = `<ul class="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4"><li>${T.interest_tech_books}</li><li>${T.interest_automation}</li><li>${T.interest_sports}</li><li>${T.interest_science}</li></ul>`;
+      document.querySelectorAll('.language-link').forEach(a=>{a.classList.remove('active'); if(a.dataset.lang===lang) a.classList.add('active');});
+      renderSkills(lang);
+    }
+
+    function setupPDF(){
+      const btn=document.getElementById('download-pdf-btn');
+      btn.addEventListener('click', async ()=>{
+        const resumeElement = document.getElementById('resume-container');
+        const body = document.body; body.classList.add('pdf-generating');
+        const { jsPDF } = window.jspdf; const rect = resumeElement.getBoundingClientRect();
+        const w = rect.width; const h = resumeElement.scrollHeight;
+        try{
+          const left=document.getElementById('left-column'); const right=document.getElementById('right-column');
+          left.classList.remove('lg:overflow-y-scroll'); right.classList.remove('lg:overflow-y-scroll');
+          const canvas = await html2canvas(resumeElement,{scale:2,useCORS:true,logging:false,scrollX:0,scrollY:0,width:w,height:h,allowTaint:true,backgroundColor:'#ffffff'});
+          const img = canvas.toDataURL('image/jpeg',1.0);
+          const pdf = new jsPDF({orientation:'p',unit:'px',format:[w,h]});
+          pdf.addImage(img,'JPEG',0,0,w,h); pdf.save('Roger_Ruiz_Resume.pdf');
+        }catch(e){ console.error(e); }
+        finally{
+          document.getElementById('left-column').classList.add('lg:overflow-y-scroll');
+          document.getElementById('right-column').classList.add('lg:overflow-y-scroll');
+          body.classList.remove('pdf-generating');
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelectorAll('.language-link').forEach(a=>a.addEventListener('click',e=>{e.preventDefault(); setLanguage(e.currentTarget.dataset.lang);}));
+      setLanguage('en');
+      setupPDF();
+    });
+  </script>
+</body>
+</html>
